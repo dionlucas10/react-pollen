@@ -1,0 +1,22 @@
+button {
+    background-color: var(--primary-color);
+    border: transparent;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+    button {
+        margin-top: 10px;
+    }
+}

@@ -1,0 +1,21 @@
+:root{
+    --primary-color: #FFC61A;
+    --silse-color: #333;
+    --branco-color: #f4f4f4;
+    --black-color: #000;
+
+
+    --font-principal: @import url('https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-principal);
+}
+
+body{
+    background-color: var(--black-color);
+}

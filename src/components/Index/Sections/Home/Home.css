@@ -1,0 +1,130 @@
+.home-banner {
+  border: 4px solid var(--primary-color);
+  border-radius: 28px;
+  padding: 40px;
+  max-width: 1180px;
+  margin: 40px auto;
+  color: var(--branco-color);
+}
+
+.home-banner__content {
+  display: flex;
+  align-items: stretch;
+  gap: 40px;
+}
+
+.home-banner__text {
+  flex: 1;
+  min-width: 320px;
+}
+
+.home-banner__text span {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: var(--primary-color);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.home-banner__text h1 {
+  font-size: clamp(3rem, 4vw, 4.5rem);
+  line-height: 0.95;
+  margin-bottom: 22px;
+}
+
+.home-banner__text strong {
+  color: var(--primary-color);
+}
+
+.home-banner__text p {
+  max-width: 640px;
+  line-height: 1.85;
+  color: var(--branco-color);
+  margin-bottom: 32px;
+}
+
+.home-banner__cta {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.home-banner__cta input {
+  flex: 1;
+  min-width: 220px;
+  padding: 18px 22px;
+  border-radius: 18px;
+  border: 1px solid #e6e6e6;
+  background: #e3d9d9;
+  color: var(--black-color);
+  font-size: 1rem;
+}
+
+.home-banner__cta button {
+  border: none;
+  border-radius: 18px;
+  padding: 18px 32px;
+  background: var(--black-color);
+  color: white;
+  background-color: var(--primary-color);
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.home-banner__cta button:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.05);
+}
+
+.home-banner__visual {
+  flex: 1;
+  min-height: 320px;
+  border-radius: 28px;
+  background: radial-gradient(circle at 15% 20%, rgba(255,198,26,0.2) 0, transparent 20%),
+    radial-gradient(circle at 80% 25%, rgba(51,51,51,0.08) 0, transparent 12%),
+    linear-gradient(180deg, #f9f7ff 0%, #fcfcff 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.home-banner__visual::before {
+  content: '';
+  position: absolute;
+  inset: 16px;
+  border-radius: 20px;
+  background-image: radial-gradient(rgba(102, 51, 153, 0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
+  opacity: 0.9;
+}
+
+@media (max-width: 960px) {
+  .home-banner__content {
+    flex-direction: column;
+  }
+
+  .home-banner__visual {
+    min-height: 260px;
+  }
+}
+
+@media (max-width: 640px) {
+  .home-banner {
+    padding: 24px;
+  }
+
+  .home-banner__text h1 {
+    font-size: 2.4rem;
+  }
+
+  .home-banner__cta {
+    flex-direction: column;
+  }
+
+  .home-banner__cta button,
+  .home-banner__cta input {
+    width: 100%;
+  }
+}
