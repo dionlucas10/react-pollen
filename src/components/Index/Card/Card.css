@@ -1,0 +1,151 @@
+.card-item {
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+}
+
+.card-gradient {
+  position: relative;
+  width: 100%;
+  border-radius: 32px;
+  padding: 1px;
+  overflow: hidden;
+  box-shadow: 0 26px 70px rgba(15, 23, 42, 0.18);
+}
+
+.card-gradient::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 36px;
+  background: conic-gradient(
+    from 0deg,
+    #f8e62b 0deg,
+    #f9d147 30deg,
+    #fcd34d 90deg,
+    #fbbf24 150deg,
+    #fde68a 210deg,
+    #fcd34d 270deg,
+    #f8e62b 330deg,
+    #f8e62b 360deg
+  );
+  animation: rotate-border 5s linear infinite;
+  transform-origin: center center;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.card-surface {
+  position: relative;
+  z-index: 2;
+  background: #0f172a;
+  border-radius: 32px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+@keyframes rotate-border {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.card-image {
+  position: relative;
+  min-height: 280px;
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+
+.card-item:hover .card-image img {
+  transform: scale(1.05);
+}
+
+.card-image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.08), rgba(15, 23, 42, 0.88));
+}
+
+.card-badge {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.65rem 1rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.card-body {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.card-title {
+  margin: 0;
+  font-size: 1.6rem;
+  color: #ffffff;
+  line-height: 1.2;
+}
+
+.card-description {
+  margin: 0;
+  color: #cbd5e1;
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+.card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.card-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  padding: 0.95rem 1.3rem;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(90deg, #8b5cf6 0%, #ec4899 50%, #fb923c 100%);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 30px rgba(251, 146, 60, 0.32);
+}
+
+.card-cta span:last-child {
+  display: inline-flex;
+  font-size: 1rem;
+}
