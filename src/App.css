@@ -1,3 +1,123 @@
-.App{
-    /* background-color: var(--black-color); */
+.auth-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    padding: 1rem;
 }
+
+.auth-modal {
+    width: min(100%, 480px);
+    max-width: 480px;
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
+    padding: 1.5rem;
+    color: #1b1b1b;
+}
+
+.auth-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.auth-modal-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.auth-modal-header p {
+    margin: 0.25rem 0 0;
+    color: #555;
+}
+
+.auth-modal-close {
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+    color: #333;
+}
+
+.auth-modal-switch {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #e5e5e5;
+    border-radius: 999px;
+    background: #f5f5f5;
+    overflow: hidden;
+}
+
+.auth-modal-switch button {
+    flex: 1;
+    border: none;
+    background: transparent;
+    color: #555;
+    padding: 0.85rem 1rem;
+    cursor: pointer;
+    font-weight: 700;
+    transition: background 0.2s, color 0.2s;
+}
+
+.auth-modal-switch button.active {
+    background: var(--primary-color);
+    color: white;
+}
+
+.auth-modal-form {
+    display: grid;
+    gap: 1rem;
+}
+
+.auth-modal-form label {
+    display: grid;
+    gap: 0.4rem;
+    font-size: 0.95rem;
+    color: #444;
+}
+
+.auth-modal-form input {
+    width: 100%;
+    padding: 0.95rem 1rem;
+    border: 1px solid #dcdcdc;
+    border-radius: 0.85rem;
+    background: #fff;
+    color: #111;
+}
+
+.auth-modal-form input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(127, 63, 255, 0.14);
+}
+
+.auth-modal-submit {
+    width: 100%;
+    padding: 0.95rem 1rem;
+    border-radius: 0.85rem;
+    border: none;
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.auth-modal-submit:hover {
+    opacity: 0.95;
+}
+
+.auth-error {
+    margin: 0;
+    color: #b00020;
+    font-size: 0.95rem;
+    text-align: left;
+}
+
